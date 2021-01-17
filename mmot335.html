@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>The Bob Doran Museum of Computing</title>
+    <link rel="stylesheet" href="mmot335.css">
+    <link rel= "icon" type="image/png" href ="http://redsox.uoa.auckland.ac.nz/ms/logo-192x192.png">
+    <script src ="mmot335.js"></script>
+</head>
+<body>
+        <nav>
+           <table style="width: 100%;">
+              <tr> 
+                  <td> <img src="http://redsox.uoa.auckland.ac.nz/ms/logo.svg" alt="" height = 90 width = 90> </td>
+                  <td class = "heading"><h1>The Bob Doran Museum of Computing</h1></td> 
+                 <td id="Home" class = "center" onclick="showHome();">
+                        &#x1F3E0;
+                 </td>
+                 <td id="News" class="center" onclick="showNews();">
+                        &#x1F4F0;
+                 </td>
+                 <td id="Displays" class="center" onclick="showDisplays();">
+                        &#x1F4BB;
+                 </td>
+                 <td id="Guestbook" class="center" onclick="showGuestbook();">
+                        &#x270D;
+                      </td>
+              </tr>
+           </table>
+           <hr style = "border: 4px solid #191970;" />
+        </nav>
+        <div id="SectionHome" style="display:none">
+           <section>
+    
+                <p class="center" style = "padding-top:200px; font-size:30px;">Welcome to The Bob Doran Museum of Computing. You can learn more about the displays here.</p> 
+                <p class="center" style = "padding-top:20px;">If you are intrigued by what you find here and live close to Auckland, or are visiting the city, 
+                        please feel free to drop in to the school and see the displays for yourself. We are located at the University on Princes Street and 
+                        are always open during normal office hours and also in the evenings and on the weekends when classes are in session. </p>  
+           </section>
+        </div>
+        <div id="SectionNews" style="display:none">
+           <section>
+                <h2 class = "heading" style= "font-size: 30px"> News </h2>
+                <hr />
+                <p id="newsContent" class="center"></p>
+           </section>
+        </div>
+        <div id="SectionDisplays" style="display:none">
+           <section>
+                <h2 class = "heading" style = "font-size: 30px"> Displays </h2>
+                <hr />
+                <div id = "search">
+                <input type = "text" id = "searchDisplay" style = "width:400px; background-color:#B0C4DE; border: 1px solid #191970" onkeyup = "searchDisplays();" placeholder = &#x1F50D>
+                </div>
+                <p id="displaysContent" class="center"></p>
+           </section>
+        </div>
+        <div id="SectionGuestbook" style="display:none"> 
+             <section>
+                            <h2 class = "heading" style = "font-size: 30px"> Guest book </h2>
+                            <hr />
+                            <br>
+                            <br>
+                            <div class = "center">
+                            <p> Please sign out guest book. Your comments are greatly appreciated</p>
+                            <br>
+                            <textarea  style = "font-family: Helvetica;border:none; border-radius: 5px;" rows="10" id = "Comment" cols="60" placeholder = "Enter your comment"></textarea>
+                            <br>
+                            <br>
+                            <input type ="text" id="Name" size="65" placeholder = "Enter your full name please" style = "border:none; border-radius: 5px;">
+                            <br>
+                            <br>
+                            <input type ="submit" value="Submit" class  = "guestbookbutton" onclick="postComment()">
+                            <input type = "submit" value = "Refresh" class = "guestbookbutton" onclick = "reload()" >
+                            <br>
+                            <br>
+                            </div>
+                        <h3> Recent Entries</h3>
+                    <iframe src="http://redsox.uoa.auckland.ac.nz/ms/MuseumService.svc/htmlcomments" id="commentsSection" class = "center" height="200%" width="100%" style = "border: 0;"></iframe>
+                </section>
+          </div>
+     </body>
+     </html>
